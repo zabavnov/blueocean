@@ -19,7 +19,7 @@ pipeline {
               steps {
                   withAWS(region:'us-east-2',credentials:'s3aws') {
                   sh 'echo "Uploading content with AWS creds"'
-                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'s3aws')
+                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'jenkins-test-z')
                   }
               }
          }
